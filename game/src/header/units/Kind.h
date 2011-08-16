@@ -8,12 +8,11 @@
 #ifndef KIND_H_
 #define KIND_H_
 
-#include "Dorfbewohner.h"
+#include "units/Dorfbewohner.h"
 
-class Kind {
+class Kind : public Lebewesen {
   private :
-    Gender geschlecht;
-    unsigned int timer;
+    unsigned int end_time;
     bool begabung;
     bool schule;
     bool magierschule;

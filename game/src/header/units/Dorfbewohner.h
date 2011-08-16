@@ -9,16 +9,19 @@
 #define DORFBEWOHNER_H_
 
 #include <vector>
-#include <queue>
 
-class Dorfbewohner {
+#include "units/Lebewesen.h"
+#include "misc/Inventar.h"
+
+class Dorfbewohner: public Lebewesen {
   private :
-    Gender geschlecht;
     unsigned int[] berufe; // xp listen
-    Beruf* aktBeruf; // der aktuelle beruf
-    Gebaeude* arbeitsGebaeude;
-    std::queue<Aktion> aktAktion;
-    std::vector<Aura> auren;
+
+    Beruf aktBeruf; // der aktuelle beruf
+    Gebaeude* arbeitsGebaeude; // das gebaeude an dem er arbeitet
+
+    Inventar inventar; // die items die er im inventar hat
+
   public :
 
 };
